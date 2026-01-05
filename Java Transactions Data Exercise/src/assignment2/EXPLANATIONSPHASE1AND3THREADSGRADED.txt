@@ -1,0 +1,23 @@
+
+In Phase(i), I have chosen synchronized statements to protect the critical sections of the methods deposit(), withdraw(), and query(). 
+Synchronized statements are used to ensure that only one thread can execute the synchronized block of code at a time for a given object.
+
+The choice of using synchronized statements over synchronized methods is based on the need for more specific control over synchronization.
+
+Synchronized statements allow us to synchronize specific parts of code rather than the entire methods. 
+One significant difference between synchronized method and block is that Synchronized block generally reduce scope of lock. 
+
+This is beneficial in scenarios where only certain parts of a method need to be synchronized, while other parts can execute concurrently without synchronization overhead.
+
+Also, when only a small amount of the code needs to be synchronized, synchronized statements perform better than synchronized methods. 
+This is because methods that are synchronized use the entire method, which could give needless conflicts between threads if the function as a whole doesn't need synchronization, which in the end makes it slower.
+
+
+
+
+
+Phase(ii)
+
+When comparing the execution times of the two-thread and three-thread implementations, the three-thread implementation runs faster:
+
+Concurrency: More threads are available to handle requests concurrently when there are three threads. This implies that other threads can go on processing requests while one thread waits for a synchronisation lock. Concurrent execution has the potential to accelerate processing times overall.
