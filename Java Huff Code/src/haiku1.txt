@@ -1,0 +1,3 @@
+insertion, quick, merge
+choosing the best sorting way
+optimized result

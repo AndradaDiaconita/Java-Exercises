@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Telephone Number Form</title>
+</head>
+<body>
+    <h1>Telephone Number Form</h1>
+    <form action="/checkPhoneNumber" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="phoneNumber">Phone Number (ddd-ddd-dddd):</label>
+        <input type="text" id="phoneNumber" name="phoneNumber" pattern="\d{3}-\d{3}-\d{4}" required>
+        <small>Format: ddd-ddd-dddd</small><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
